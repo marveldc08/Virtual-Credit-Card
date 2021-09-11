@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+San:wght@400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josfin Sans', sans-serif;
+}
+
+.container{
+    min-height: 100vh;
+    width: 100%;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.card{
+    width: 500px;
+    height: 300px;
+    cursor: pointer;
+    color: white;
+    perspective: 1000px;
+}
+.card-inner{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+.front, .back{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(45deg, #0045c7, #ff2c7d );
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 30px;
+    border-radius: 15px;
+    overflow: hidden;
+    z-index: 1;
+    backface-visibility: hidden;
+
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.map-img{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+    z-index: -1;
+}
+.card-number{
+    font-size: 24px;
+    margin-top: 60px;
+}
+.card-holder{
+    font-size: 12px;
+    margin-top: 40px;
+
+}
+.name{
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.bar{
+    background: #222;
+    margin-right: -30px;
+    margin-left: -30px;
+    margin-top: 10px;
+    height: 60px;
+}
+.card-cvv{
+    margin-top: 10px;
+}
+.card-cvv div{
+    flex: 1;
+}
+.card-cvv img{
+    width: 100%;
+    display: block;
+    line-height: 1;
+}
+.card-cvv{
+    background: #fff;
+    color: black;
+    font-size: 22px;
+    padding: 10px 20px;
+}
+.card-text{
+    font-size: 12px;
+    margin-top: 10px;
+}
+.signature{
+    margin-top: 30px;
+    font-size: 12px;
+}
+.back{
+    transform: rotateY(180deg);
+}
+.card:hover .card-inner{
+    transform: rotateY(-180deg);
+}
+.small-text{
+    font-size: 9px;
+}
